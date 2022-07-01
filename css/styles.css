@@ -172,7 +172,8 @@ h3 {
 }
 
 .contact-list .link {
-  display: block;
+  display: flex;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -560,7 +561,6 @@ h3 {
 }
 
 .footer-addresses {
-  margin-right: 70px;
 }
 
 .footer-logo {
@@ -601,10 +601,9 @@ h3 {
   color: var(--accent-color);
 }
 
-/* .social-links {
-  display: flex;
-  align-items: baseline;
-} */
+.social-links {
+  margin-left: 70px;
+}
 
 .social-links > .social-links-title,
 .subscribe > .subscribe-title {
@@ -675,19 +674,18 @@ h3 {
 }
 
 .subscribe-form {
-  display: flex;
+  /* position: relative; */
   margin-top: 20px;
 }
 
 .form-field {
-  position: relative;
 }
 
 .subscribe-label {
-  position: absolute;
+  /* position: absolute;
   top: 50%;
   left: 16px;
-  transform: translateY(-50%);
+  transform: translateY(-50%); */
 
   font-size: 16px;
   line-height: 1.25;
@@ -700,7 +698,7 @@ h3 {
   width: 358px;
   height: 50px;
   margin-right: 12px;
-  padding-left: 75px;
+  padding-left: 16px;
   color: var(--secondary-text-color);
 
   background-color: transparent;
@@ -709,8 +707,12 @@ h3 {
   border-radius: 4px;
 }
 
+.subscribe-input:focus + .subscribe-label {
+  visibility: hidden;
+}
+
 .subscribe-button {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
 }
@@ -948,6 +950,11 @@ h3 {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
+.btn-close:hover .close-icon,
+.btn-close:focus .close-icon {
+  fill: var(--accent-color);
+}
+
 .close-icon {
   width: 11px;
   height: 11px;
@@ -990,8 +997,7 @@ h3 {
   background-color: transparent;
   outline: transparent;
 
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-input:focus,
@@ -1008,6 +1014,8 @@ h3 {
   left: 12px;
   top: 50%;
   transform: translateY(-50%);
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-comment {
@@ -1034,6 +1042,10 @@ h3 {
   letter-spacing: 0.01em;
 
   color: rgba(117, 117, 117, 0.5);
+}
+
+.check-input:focus + .check-icon {
+  fill: #2196f3;
 }
 
 .check-input:checked + .check-icon {
