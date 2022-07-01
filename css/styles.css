@@ -674,19 +674,10 @@ h3 {
 }
 
 .subscribe-form {
-  /* position: relative; */
   margin-top: 20px;
 }
 
-.form-field {
-}
-
 .subscribe-label {
-  /* position: absolute;
-  top: 50%;
-  left: 16px;
-  transform: translateY(-50%); */
-
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
